@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Portal do Colaborador</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .btn-avancado {
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid black;
+            cursor: pointer;
+            width: 250px;
+            text-align: center;
+        }
+        .mensagem {
+            color: green;
+            font-weight: bold;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bem-vindo ao Portal</h1>
+
+    <div class="formulario">
+        <label for="nome_usuario">Nome Completo:</label><br>
+        <input type="text" id="nome_usuario" name="usuario_input"><br><br>
+
+        <label for="email">E-mail corporativo:</label><br>
+        <input type="email" id="email" name="email_input"><br><br>
+
+        <button id="btn-enviar"
+                onclick="document.getElementById('msg-sucesso').style.display='block';">
+            Enviar Dados
+        </button>
+
+        <p id="msg-sucesso" class="mensagem">
+            Dados enviados com sucesso!
+        </p>
+    </div>
+
+    <hr>
+
+    <h3>Ações Avançadas</h3>
+
+    <div id="btn-duplo"
+         class="btn-avancado"
+         ondblclick="this.innerText='Autorizado!'; this.style.backgroundColor='lightgreen';">
+        Duplo clique para Autorizar
+    </div>
+
+    <div id="btn-direito"
+         class="btn-avancado"
+         oncontextmenu="this.innerText='Menu Aberto!'; this.style.backgroundColor='yellow'; return false;">
+        Clique direito para Opções
+    </div>
+
+    <textarea id="obs" rows="4" cols="50">Apague este texto e insira suas observações.</textarea>
+</body>
+</html>
